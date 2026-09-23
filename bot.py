@@ -343,7 +343,9 @@ def check_credit(user_id):
             conn.commit()
             update_user(user_id, credit_amount=0, credit_due=None)
             return False
-    return Truedef cmd_help(user_id, peer_id):
+    return True
+
+def cmd_help(user_id, peer_id):
     text = (
         "📋 КОМАНДЫ УЧАСТНИКОВ:\n"
         "/профиль — профиль\n/паспорт — паспорт\n/карта — карта\n"
